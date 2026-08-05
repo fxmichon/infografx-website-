@@ -1,0 +1,200 @@
+:root {
+    --col_black: #0f0f0f;        /* fond principal */
+    --col_white: #e6e6e6;        /* texte principal */
+    --col_grey: #333333;         /* bordures */
+    --col_orange: #eb6c1a;       /* accent chaud */
+    --col_black2: #151515;       /* header */
+    --col_black3: #1a1a1a;       /* cartes */
+    --col_grey2: #555555;        /* texte secondaire */
+    --col_light_blue:#96dcf8;
+    --col_blue: #00adee;         /* accent principal */
+    --col_blue_dark: #809dd2;    /* hover */
+    --col_blue_dark2: #0e5488;
+
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: var(--col_black);
+    color: var(--col_white);
+    line-height: 1.6;
+}
+
+header {
+    padding: 20px 40px;
+    background: var(--col_black2);
+    border-bottom: 1px solid var(--col_grey);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    margin-right: 20px;
+    color: var(--col_orange);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+nav a:hover {
+    color: var(--col_blue);
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------
+   RESET & BASE
+--------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #0f0f0f;
+    color: #e5e5e5;
+    line-height: 1.6;
+}
+
+/* ------------------------------
+   HEADER & NAV
+--------------------------------*/
+.header {
+    width: 100%;
+    padding: 20px 40px;
+    background: #0f0f0f;
+    border-bottom: 1px solid #1f1f1f;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+    justify-content: flex-end;
+}
+
+.nav a {
+    color: #e5e5e5;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav a:hover {
+    color: #7a5cff; /* Accent violet InfoGraFX */
+}
+
+/* ------------------------------
+   HERO SECTION
+--------------------------------*/
+.hero {
+    text-align: center;
+    padding: 120px 20px 80px;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #cfcfcf;
+}
+
+/* ------------------------------
+   CARDS SECTION
+--------------------------------*/
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    padding: 20px;
+    border-radius: 6px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #7a5cff;
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.card p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    color: #cfcfcf;
+}
+
+.card a {
+    display: inline-block;
+    padding: 10px 16px;
+    background: #7a5cff;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.card a:hover {
+    background: #5b3fd9;
+}
+
+/* ------------------------------
+   FOOTER (optionnel)
+--------------------------------*/
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #777;
+    font-size: 0.9rem;
+}
