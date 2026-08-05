@@ -1,0 +1,19 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / Editors
+.vscode/
+.idea/
+
+# Node modules (si un jour tu ajoutes un bundler)
+node_modules/
+
+# Build output (si tu utilises un générateur statique plus tard)
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
