@@ -1,65 +1,31 @@
+/* ------------------------------
+   PALETTE ÉTENDUE
+--------------------------------*/
 :root {
-    --col_black: #0f0f0f;        /* fond principal */
-    --col_white: #e6e6e6;        /* texte principal */
-    --col_grey: #333333;         /* bordures */
-    --col_orange: #eb6c1a;       /* accent chaud */
-    --col_black2: #151515;       /* header */
-    --col_black3: #1a1a1a;       /* cartes */
-    --col_grey2: #555555;        /* texte secondaire */
+    /* Nouveau thème blanc cassé */
+    --col-bg: #f7f7f5;          /* Blanc cassé */
+    --col-text: #2a2a2a;        /* Gris foncé élégant */
+    --col-text-light: #4a4a4a;  /* Gris moyen */
+    --col-border: #e0e0de;      /* Gris clair */
+    --col-border-hover: #c8c8c6;
+
+    /* Accent artistique */
+    --col-accent: #7a5cff;      /* Violet créatif */
+    --col-accent-dark: #5b3fd9;
+
+    /* Ancienne palette (disponible si tu veux l’utiliser) */
+    --col_black: #0f0f0f;
+    --col_white: #e6e6e6;
+    --col_grey: #333333;
+    --col_orange: #eb6c1a;
+    --col_black2: #151515;
+    --col_black3: #1a1a1a;
+    --col_grey2: #555555;
     --col_light_blue:#96dcf8;
-    --col_blue: #00adee;         /* accent principal */
-    --col_blue_dark: #809dd2;    /* hover */
+    --col_blue: #00adee;
+    --col_blue_dark: #809dd2;
     --col_blue_dark2: #0e5488;
-
 }
-
-body {
-    margin: 0;
-    font-family: "Inter", sans-serif;
-    background: var(--col_black);
-    color: var(--col_white);
-    line-height: 1.6;
-}
-
-header {
-    padding: 20px 40px;
-    background: var(--col_black2);
-    border-bottom: 1px solid var(--col_grey);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-nav a {
-    margin-right: 20px;
-    color: var(--col_orange);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 22px;
-}
-
-nav a:hover {
-    color: var(--col_blue);
-}
-
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 25px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ------------------------------
    RESET & BASE
@@ -71,40 +37,42 @@ nav a:hover {
 }
 
 body {
-    font-family: "Inter", sans-serif;
-    background-color: #0f0f0f;
-    color: #e5e5e5;
+    font-family: "Manrope", sans-serif;
+    background-color: var(--col-bg);
+    color: var(--col-text);
     line-height: 1.6;
 }
 
 /* ------------------------------
    HEADER & NAV
 --------------------------------*/
-.header {
+header {
     width: 100%;
     padding: 20px 40px;
-    background: #0f0f0f;
-    border-bottom: 1px solid #1f1f1f;
+    background: var(--col-bg);
+    border-bottom: 1px solid var(--col-border);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
-.nav {
+nav {
     display: flex;
     gap: 40px;
     justify-content: flex-end;
 }
 
-.nav a {
-    color: #e5e5e5;
+nav a {
+    color: var(--col-text);
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s ease;
+    font-weight: 400;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+    transition: opacity 0.2s ease;
 }
 
-.nav a:hover {
-    color: #7a5cff; /* Accent violet InfoGraFX */
+nav a:hover {
+    opacity: 0.6;
 }
 
 /* ------------------------------
@@ -116,17 +84,16 @@ body {
 }
 
 .hero h1 {
-    font-size: 3.2rem;
-    font-weight: 700;
+    font-size: 3rem;
+    font-weight: 300;
     margin-bottom: 20px;
-    color: #ffffff;
 }
 
 .hero p {
     font-size: 1.2rem;
     max-width: 700px;
     margin: 0 auto;
-    color: #cfcfcf;
+    color: var(--col-text-light);
 }
 
 /* ------------------------------
@@ -142,8 +109,8 @@ body {
 }
 
 .card {
-    background: #1a1a1a;
-    border: 1px solid #2a2a2a;
+    background: #ffffff;
+    border: 1px solid var(--col-border);
     padding: 20px;
     border-radius: 6px;
     transition: transform 0.2s ease, border-color 0.2s ease;
@@ -151,7 +118,7 @@ body {
 
 .card:hover {
     transform: translateY(-6px);
-    border-color: #7a5cff;
+    border-color: var(--col-border-hover);
 }
 
 .card img {
@@ -164,33 +131,33 @@ body {
 
 .card h2 {
     font-size: 1.4rem;
+    font-weight: 400;
     margin-bottom: 10px;
-    color: #ffffff;
 }
 
 .card p {
     font-size: 0.95rem;
     margin-bottom: 20px;
-    color: #cfcfcf;
+    color: var(--col-text-light);
 }
 
 .card a {
     display: inline-block;
     padding: 10px 16px;
-    background: #7a5cff;
+    background: var(--col-text);
     color: #ffffff;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 400;
     border-radius: 4px;
-    transition: background 0.2s ease;
+    transition: opacity 0.2s ease;
 }
 
 .card a:hover {
-    background: #5b3fd9;
+    opacity: 0.7;
 }
 
 /* ------------------------------
-   FOOTER (optionnel)
+   FOOTER
 --------------------------------*/
 footer {
     text-align: center;
