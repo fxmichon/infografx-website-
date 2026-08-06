@@ -2,11 +2,7 @@ export default class AnimateOnView {
     constructor(selector, options = {}) {
         this.elements = document.querySelectorAll(selector);
 
-        const defaultOptions = {
-            threshold: 0.4,
-            offset: -120 // décalage final pour ne pas être centré
-        };
-
+        const defaultOptions = { threshold: 0.4 };
         this.options = { ...defaultOptions, ...options };
 
         this.observer = new IntersectionObserver(
@@ -20,14 +16,16 @@ export default class AnimateOnView {
     onIntersect(entries) {
         entries.forEach(entry => {
             const el = entry.target;
-            const direction = el.dataset.direction || "right"; // right | left
+
+            const block = el.closest(".mediaBlock");
+            if (!block) return;
 
             if (entry.isIntersecting) {
-                el.classList.add(`visible-${direction}`);
-                el.classList.remove(`exit-${direction}`);
+                el.classList.add("visible");
+                el.classList.remove("exit");
             } else {
-                el.classList.remove(`visible-${direction}`);
-                el.classList.add(`exit-${direction}`);
+                el.classList.remove("visible");
+                el.classList.add("exit");
             }
         });
     }

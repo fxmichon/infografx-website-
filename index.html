@@ -3,11 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>François‑Xavier Michon – Portfolio</title>
+
+    <!-- Global styles -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Component styles -->
+    <link rel="stylesheet" href="css/components/MediaBlock.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
 <header>
     <nav>
         <a href="index.html">Accueil</a>
@@ -22,19 +29,29 @@
     <p>InfoGraFX arrive bientôt. HelloWorld</p>
 </div>
 
-<section class="animated-image-section">
+<!-- MEDIA BLOCK 1 -->
+<section class="mediaBlock mediaBlockAnimated mediaBlockFromRight">
+    <div class="mediaBlockText">
+        <h2>Modélisation réaliste basée sur des objets réels</h2>
+        <p>...</p>
+    </div>
+
     <img src="assets/Images/3D/TelegraphTransmitterAndBox/rendu8.png"
-         class="animated-image"
-         data-direction="right">
+         class="mediaBlockMedia animated-image">
 </section>
 
-<section class="animated-image-section">
-    <img src="assets/Images/3D/TelegraphTransmitterAndBox/rendu8.png"
-         class="animated-image"
-         data-direction="left">
+<section class="mediaBlock mediaBlockAnimated mediaBlockFromLeft">
+    
+
+    <img src="assets/Images/3D/Objects/m_speaker.png"
+         class="mediaBlockMedia animated-image">
+         <div class="mediaBlockText">
+        <h2>Assets game‑ready pour moteurs de jeu</h2>
+        <p>...</p>
+    </div>
 </section>
 
-<!-- IMPORTANT -->
+
 <script type="module" src="js/main.js"></script>
 
 </body>
