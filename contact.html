@@ -2,7 +2,10 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>François‑Xavier Michon – Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact – InfoGraFX</title>
+    <meta name="description" content="Contactez InfoGraFX pour un devis de modélisation 3D, texturing ou développement Unity.">
+
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -12,15 +15,48 @@
     <nav>
         <a href="index.html">Accueil</a>
         <a href="services.html">Services</a>
-        <a href="creations.html">Creations</a>
+        <a href="creations.html">Créations</a>
+        <a href="apropos.html">Qui suis-je</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
 
-<div class="construction">
-    <h1>Site en construction</h1>
-    <p>InfoGraFX arrive bientôt. HelloWorld</p>
-</div>
+<section class="hero">
+    <h1>Contact</h1>
+    <p class="heroTagline">Un projet, un devis, ou simplement une question technique : décrivez votre besoin.</p>
+</section>
+
+<section class="contactWrapper">
+    <!-- Remplacer YOUR_FORM_ID par l'identifiant fourni par Formspree (formspree.io) -->
+    <form class="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="projectType">Type de projet</label>
+        <select id="projectType" name="projectType">
+            <option>Modélisation / Texturing</option>
+            <option>Animation</option>
+            <option>Conseil / Cadrage de projet</option>
+            <option>Développement Unity / VR</option>
+            <option>Autre</option>
+        </select>
+
+        <label for="message">Décrivez votre besoin</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">Envoyer</button>
+    </form>
+
+    <div class="contactInfo">
+        <h2>Coordonnées directes</h2>
+        <p>Email : <a href="mailto:infografx13@gmail.com">infografx13@gmail.com</a></p>
+        <p>Réponse sous 48h ouvrées.</p>
+        <p class="legalNote">InfoGraFX — Micro-entreprise · SIRET : [à compléter]</p>
+    </div>
+</section>
 
 </body>
 </html>

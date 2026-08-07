@@ -24,7 +24,8 @@
     --col_light_blue:#96dcf8;
     --col_blue: #00adee;
     --col_blue_dark: #809dd2;
-    --col_blue_dark2: #0e5488;
+    --col_blue_dark2: #10609c;
+    --col_blue_dark3: #073c64;
 }
 
 /* ------------------------------
@@ -43,13 +44,31 @@ body {
     line-height: 1.6;
 }
 
+a {
+    color: var(--col_blue_dark2);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: opacity 0.2s ease;
+}
+
+a:hover {
+    color: var(--col_blue_dark2);
+    text-decoration: none;
+    font-weight: 400;
+text-decoration:underline ;    letter-spacing: 0.5px;
+    transition: opacity 0.2s ease;
+}
+
 /* ------------------------------
    HEADER & NAV
 --------------------------------*/
 header {
     width: 100%;
     padding: 20px 40px;
-    background: var(--col-bg);
+    /* background: var(--col-bg); */
+    background: var(--col_blue_dark);
     border-bottom: 1px solid var(--col-border);
     position: sticky;
     top: 0;
@@ -63,10 +82,10 @@ nav {
 }
 
 nav a {
-    color: var(--col-text);
+    color: var(--col_white);
     text-decoration: none;
     font-weight: 400;
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     letter-spacing: 0.5px;
     transition: opacity 0.2s ease;
 }
@@ -88,6 +107,8 @@ nav a:hover {
     font-weight: 300;
     margin-bottom: 20px;
 }
+
+
 
 .hero p {
     font-size: 1.2rem;
@@ -166,3 +187,167 @@ footer {
     font-size: 0.9rem;
 }
 
+
+/* ------------------------------
+   HERO — bouton d'appel à l'action
+--------------------------------*/
+.heroTagline {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--col-text);
+    max-width: 700px;
+    margin: 0 auto 10px;
+}
+
+.heroCta {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 28px;
+    background: var(--col_blue_dark2);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.heroCta:hover {
+    background: var(--col_blue_dark3);
+}
+
+/* ------------------------------
+   PILIERS DE SERVICES (accueil)
+--------------------------------*/
+.pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 40px 80px;
+}
+
+.pillarCard {
+    background: #ffffff;
+    border: 1px solid var(--col-border);
+    border-radius: 6px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pillarLabel {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: var(--col_blue);
+    font-weight: 600;
+}
+
+.pillarCard h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.pillarCard p {
+    color: var(--col-text-light);
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.pillarCard a {
+    color: var(--col_blue_dark2);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.pillarCard a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------------------
+   TITRE DE SECTION (services.html)
+--------------------------------*/
+.sectionTitle {
+    padding: 10px 40px;
+    font-size: 3rem;
+    font-weight: 600;
+    padding-bottom: 16px;
+    background-color: var(--col_blue_dark2);
+    color: var(--col_white);
+}
+
+/* ------------------------------
+   FORMULAIRE DE CONTACT
+--------------------------------*/
+.contactWrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 40px 80px;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.contactForm label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+.contactForm input,
+.contactForm select,
+.contactForm textarea {
+    padding: 10px 12px;
+    border: 1px solid var(--col-border);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    background: #ffffff;
+    color: var(--col-text);
+}
+
+.contactForm button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: var(--col_blue_dark2);
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.contactForm button:hover {
+    background: var(--col_blue_dark3);
+}
+
+.contactInfo h2 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.contactInfo p {
+    margin-bottom: 8px;
+    color: var(--col-text-light);
+}
+
+.legalNote {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 20px;
+}
+
+@media (max-width: 700px) {
+    .contactWrapper {
+        grid-template-columns: 1fr;
+    }
+}
