@@ -22,6 +22,9 @@
     --col_black3: #1a1a1a;
     --col_grey2: #555555;
     --col_light_blue:#96dcf8;
+    --col_cyan_neon:#00E5FF;
+    --col_night_blue: #0B0F26;
+    --col_deep_blue: #0E3A66;
     --col_blue: #00adee;
     --col_blue_dark: #809dd2;
     --col_blue_dark2: #10609c;
@@ -65,7 +68,7 @@ text-decoration:underline ;    letter-spacing: 0.5px;
    HEADER & NAV
 --------------------------------*/
 header {
-    width: 100%;
+    width: 100%; 
     padding: 20px 40px;
     /* background: var(--col-bg); */
     background: var(--col_blue_dark);
@@ -73,8 +76,19 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+
+      display: flex;               /* ALIGNEMENT GLOBAL */
+    align-items: center;         /* CENTRAGE VERTICAL */
+    justify-content: space-between; /* LOGO À GAUCHE / NAV À DROITE */
+        height: 80px;                /* FIXE LA HAUTEUR DU HEADER */
 }
 
+.minlogo{
+display: block;
+    max-height: 60px;            /* NE DÉPASSE JAMAIS LE HEADER */
+    width: auto;
+    height: auto;
+}
 nav {
     display: flex;
     gap: 40px;
@@ -99,7 +113,7 @@ nav a:hover {
 --------------------------------*/
 .hero {
     text-align: center;
-    padding: 120px 20px 80px;
+    padding: 40px 20px 40px;
 }
 
 .hero h1 {
@@ -276,6 +290,17 @@ footer {
     padding-bottom: 16px;
     background-color: var(--col_blue_dark2);
     color: var(--col_white);
+}
+
+/* IMAGE — entre 40% et 66% selon sa taille réelle */
+.logo {
+    flex: 0 1 auto;          /* image prend l’espace qu’elle peut */
+    max-height: 30vh;        /* jamais trop haute */
+    width: auto;
+    height: auto;
+    object-fit: contain;     /* image entière */
+    object-position: left;   /* collée au bord */
+    background: var(--col-bg);        /* bandes propres */
 }
 
 /* ------------------------------
