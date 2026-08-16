@@ -12,7 +12,7 @@
 
 <body>
 <header>            
-    <img src="assets/Images/Logo/logo1.png" class="minlogo" alt="InfoGraFX">
+    <img src="assets/Images/Logo/logo1BATD.png" class="minlogo" alt="InfoGraFX">
     <nav>
         <a href="index.html">Accueil</a>
         <a href="services.html">Services</a>
@@ -28,16 +28,18 @@
 </section>
 
 <section class="contactWrapper">
-    <!-- Remplacer YOUR_FORM_ID par l'identifiant fourni par Formspree (formspree.io) -->
-    <form class="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <label for="name">Nom</label>
-        <input type="text" id="name" name="name" required>
+    <!-- Solution temporaire sans service tiers : ouvre le client mail du visiteur
+         avec les champs pré-remplis. Limite : ne fonctionne que si un client mail
+         est configuré sur l'appareil (peut ne rien faire sur certains mobiles/webmail). -->
+    <form class="contactForm" action="mailto:infografx13@gmail.com" method="POST" enctype="text/plain">
+        <!-- <label for="name">Nom</label>
+        <input type="text" id="name" name="Nom" required> -->
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+        <!-- <label for="email">Votre email (pour vous répondre)</label>
+        <input type="email" id="email" name="Repondre_a" required> -->
 
         <label for="projectType">Type de projet</label>
-        <select id="projectType" name="projectType">
+        <select id="projectType" name="Type_de_projet">
             <option>Modélisation / Texturing</option>
             <option>Animation</option>
             <option>Conseil / Cadrage de projet</option>
@@ -46,19 +48,21 @@
         </select>
 
         <label for="message">Décrivez votre besoin</label>
-        <textarea id="message" name="message" rows="6" required></textarea>
+        <textarea id="message" name="Message" rows="6" required></textarea>
 
         <button type="submit">Envoyer</button>
     </form>
 
+    <p class="mailtoNote">En cliquant sur « Envoyer », votre application email par défaut va s'ouvrir avec le message pré-rempli, prêt à partir depuis votre propre adresse mail avec laquelle nous communiquerons. Pas de client mail installé ? Écrivez-nous directement à <a href="mailto:infografx13@gmail.com">infografx13@gmail.com</a>.</p>
+
     <div class="contactInfo">
-        <h2>Coordonnées directes</h2>
-        <p>Email : <a href="mailto:infografx13@gmail.com">infografx13@gmail.com</a></p>
-        <p>Réponse sous 48h ouvrées.</p>
+        <h2>Réponse sous 48h ouvrées.</h2>
         <p class="legalNote">InfoGraFX - Micro-entreprise <br>
             SIRET : 10846572500019</p>
     </div>
 </section>
+
+<script type="module" src="js/components/contactForm.js"></script>
 
 </body>
 </html>
