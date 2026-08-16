@@ -25,7 +25,8 @@
     flex: 0 1 auto;          /* image prend l’espace qu’elle peut */
     min-width: 40%;          /* jamais trop petite */
     max-width: 66%;          /* jamais trop grande */
-    max-height: 80vh;        /* jamais trop haute */
+    max-height: 50vh;        /* jamais trop haute */
+    border-radius:2cap;
     width: auto;
     height: auto;
     object-fit: contain;     /* image entière */
