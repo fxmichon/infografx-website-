@@ -1,0 +1,193 @@
+/* ============================
+   LIGHTBOX / GALERIE MODALE
+   (utilisée pour l'agrandissement d'images
+   et pour la galerie de projets en page Créations)
+============================ */
+
+.lightboxOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 90px;
+    background: rgba(15, 15, 15, 0.92);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease;
+}
+
+.lightboxOverlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightboxContent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.lightboxImageWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 72vh;
+}
+
+.lightboxImage {
+    max-width: 100%;
+    max-height: 72vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: scale(0.98);
+    transition: opacity 0.45s ease, transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Point de départ selon le sens de navigation, avant de glisser vers la position finale */
+.lightboxImage.slide-from-right {
+    transform: translateX(120px) scale(0.98);
+}
+
+.lightboxImage.slide-from-left {
+    transform: translateX(-120px) scale(0.98);
+}
+
+.lightboxImage.visible {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+}
+
+.lightboxCaption {
+    max-width: 640px;
+    text-align: center;
+    color: var(--col_white, #e6e6e6);
+}
+
+.lightboxCaption h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.lightboxCaption p {
+    font-size: 0.95rem;
+    color: rgba(230, 230, 230, 0.8);
+    line-height: 1.5;
+}
+
+.lightboxCounter {
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    color: rgba(230, 230, 230, 0.6);
+}
+
+.lightboxClose,
+.lightboxArrow {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.lightboxClose:hover,
+.lightboxArrow:hover {
+    background: var(--col_blue_dark2, #10609c);
+}
+
+.lightboxClose:focus-visible,
+.lightboxArrow:focus-visible {
+    outline: 2px solid var(--col_blue, #00adee);
+    outline-offset: 2px;
+}
+
+.lightboxClose {
+    top: 24px;
+    right: 24px;
+}
+
+.lightboxArrow {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lightboxArrowPrev {
+    left: 24px;
+}
+
+.lightboxArrowNext {
+    right: 24px;
+}
+
+.lightboxArrow[hidden],
+.lightboxCounter[hidden],
+.lightboxCaption[hidden] {
+    display: none;
+}
+
+/* Affordance sur les images/cartes cliquables */
+.mediaBlockMedia {
+    cursor: zoom-in;
+}
+
+.cardClickable {
+    cursor: pointer;
+}
+
+.cardClickable:focus-visible {
+    outline: 2px solid var(--col_blue_dark2, #10609c);
+    outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+    .lightboxOverlay {
+        padding: 24px 16px;
+    }
+
+    .lightboxArrow {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+    }
+
+    .lightboxArrowPrev {
+        left: 8px;
+    }
+
+    .lightboxArrowNext {
+        right: 8px;
+    }
+
+    .lightboxClose {
+        top: 12px;
+        right: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .lightboxOverlay,
+    .lightboxImage {
+        transition: none;
+    }
+}
