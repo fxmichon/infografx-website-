@@ -1,0 +1,108 @@
+/* ============================
+   MEDIA BLOCK — FLEX ADAPTATIF
+============================ */
+
+.mediaBlock {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    padding: 60px 0;
+    gap: 40px;
+}
+
+/* ORDRE TEXTE / IMAGE */
+.mediaBlockFromRight .mediaBlockText { order: 0; }
+.mediaBlockFromRight .mediaBlockMedia { order: 1; }
+
+.mediaBlockFromLeft .mediaBlockMedia { order: 0; }
+.mediaBlockFromLeft .mediaBlockText { order: 1; }
+
+
+
+/* IMAGE — entre 40% et 66% selon sa taille réelle */
+.mediaBlockMedia {
+    flex: 0 1 auto;          /* image prend l’espace qu’elle peut */
+    min-width: 40%;          /* jamais trop petite */
+    max-width: 66%;          /* jamais trop grande */
+    max-height: 50vh;        /* jamais trop haute */
+    border-radius:2cap;
+    width: auto;
+    height: auto;
+    object-fit: contain;     /* image entière */
+    object-position: left;   /* collée au bord */
+    background: var(--col-bg);        /* bandes propres */
+}
+
+/* TEXTE — récupère tout l’espace restant */
+.mediaBlockText {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;   /* titre collé en haut */
+    gap: 20px;                      /* espace propre entre titre et texte */
+    flex: 1 1 auto;
+    padding: 0 40px;
+}
+
+.mediaBlockTitle {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: left;               /* aligné à gauche */
+}
+
+/* Sous-texte */
+.mediaBlockDescription {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;            /* texte justifié */
+}
+
+
+
+
+/* ============================
+   ANIMATION — SIMPLE & FIABLE
+============================ */
+
+/* Image venant de la droite */
+.mediaBlockFromRight .mediaBlockMedia {
+    opacity: 0;
+    transform: translateX(49%);
+    transition:
+        opacity 0.6s ease-out,
+        transform 0.9s cubic-bezier(0.16, 1.2, 0.3, 1);
+}
+
+.mediaBlockFromRight .mediaBlockMedia.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.mediaBlockFromRight .mediaBlockMedia.exit {
+    opacity: 0;
+    transform: translateX(49%);
+}
+
+/* Image venant de la gauche */
+.mediaBlockFromLeft .mediaBlockMedia {
+    opacity: 0;
+    transform: translateX(-49%);
+    transition:
+        opacity 0.6s ease-out,
+        transform 0.9s cubic-bezier(0.16, 1.2, 0.3, 1);
+}
+
+.mediaBlockFromLeft .mediaBlockMedia.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.mediaBlockFromLeft .mediaBlockMedia.exit {
+    opacity: 0;
+    transform: translateX(-49%);
+}
