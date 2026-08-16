@@ -139,7 +139,7 @@ nav a:hover {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 40px;
     padding: 40px;
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -353,6 +353,13 @@ footer {
 
 .contactForm button:hover {
     background: var(--col_blue_dark3);
+}
+
+.mailtoNote {
+    grid-column: 1 / -1;
+    font-size: 0.85rem;
+    color: var(--col-text-light);
+    margin-top: -30px;
 }
 
 .contactInfo h2 {
