@@ -152,9 +152,18 @@ nav a {
     transform: translateY(-7px) rotate(-45deg);
 }
 
-@media (max-width: 780px) {
+@media (max-width: 1024px) {
     .navToggle {
         display: flex;
+    }
+
+    .headerRight {
+        gap: 12px;
+    }
+
+    .langSwitchToggle {
+        padding: 6px 8px;
+        font-size: 0.8rem;
     }
 
     nav {
@@ -184,6 +193,105 @@ nav a {
 
 nav a:hover {
     opacity: 0.6;
+}
+
+/* ------------------------------
+   SÉLECTEUR DE LANGUE
+--------------------------------*/
+.headerRight {
+    display: flex;
+    align-items: center;
+    gap: clamp(12px, 2.5vw, 32px);
+}
+
+.langSwitch {
+    position: relative;
+}
+
+.langSwitchToggle {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(255, 255, 255, 0.14);
+    border: none;
+    color: var(--col_white);
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    transition: background 0.2s ease;
+}
+
+.langSwitchToggle:hover {
+    background: rgba(255, 255, 255, 0.24);
+}
+
+.langCaret {
+    font-size: 0.65rem;
+    transition: transform 0.2s ease;
+}
+
+.langSwitch.isOpen .langCaret {
+    transform: rotate(180deg);
+}
+
+.langMenu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: #ffffff;
+    border: 1px solid var(--col-border);
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    list-style: none;
+    min-width: 150px;
+    padding: 6px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    z-index: 1100;
+}
+
+.langSwitch.isOpen .langMenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.langOption {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: var(--col-text);
+    cursor: pointer;
+    text-align: left;
+}
+
+.langOption:hover {
+    background: var(--col-bg);
+}
+
+.langOption.isActive {
+    font-weight: 700;
+    color: var(--col_blue_dark2);
+}
+
+.flagIcon {
+    width: 18px;
+    height: 13px;
+    object-fit: cover;
+    border-radius: 2px;
+    flex-shrink: 0;
 }
 
 /* ------------------------------

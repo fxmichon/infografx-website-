@@ -15,68 +15,79 @@
 <body>
 
 <header>
-            <img src="./assets/Images/Logo/logo1BATD.png" class="minlogo" alt="InfoGraFX">
-    <nav>
-        
-        <a href="index.html">Accueil</a>
-        <a href="services.html">Services</a>
-        <a href="creations.html">Créations</a>        
-        <a href="apropos.html">Qui suis-je</a>
-
-        <a href="contact.html">Contact</a>
-    </nav>
+    <img src="./assets/Images/Logo/logo1BATD.png" class="minlogo" alt="InfoGraFX">
+    <div class="headerRight">
+        <nav>
+            <a href="index.html" data-i18n="nav.home">Accueil</a>
+            <a href="services.html" data-i18n="nav.services">Services</a>
+            <a href="creations.html" data-i18n="nav.creations">Créations</a>
+            <a href="apropos.html" data-i18n="nav.about">Qui suis-je</a>
+            <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="langSwitch">
+            <button type="button" class="langSwitchToggle" aria-haspopup="true" aria-expanded="false">
+                <img src="./assets/Icons/lang_fr.png" alt="" class="flagIcon langCurrentFlag" onerror="this.style.display='none'" onload="this.style.display=''">
+                <span class="langCurrent">FR</span>
+                <span class="langCaret">▾</span>
+            </button>
+            <ul class="langMenu">
+                <li><button type="button" class="langOption isActive" data-lang="fr"><img src="./assets/Icons/lang_fr.png" alt="" class="flagIcon" onerror="this.style.display='none'" onload="this.style.display=''"> Français</button></li>
+                <li><button type="button" class="langOption" data-lang="en"><img src="./assets/Icons/lang_en.png" alt="" class="flagIcon" onerror="this.style.display='none'" onload="this.style.display=''"> English</button></li>
+            </ul>
+        </div>
+    </div>
 </header>
 
 <section class="hero">
     <img src="./assets/Images/Logo/logo1NATB.png" class="logo">
-    <p class="heroTagline">Modélisation 3D, texturing, intégration moteur et interactions temps réel — pour le jeu vidéo, l'audiovisuel et la publicité.</p>
-    <p>Un interlocuteur unique à tous niveau de création</p>
-    <a href="contact.html" class="heroCta">Discuter de votre projet</a>
+    <p class="heroTagline" data-i18n="home.hero.tagline">Modélisation 3D, texturing, intégration moteur et interactions temps réel — pour le jeu vidéo, l'audiovisuel et la publicité.</p>
+    <p data-i18n="home.hero.subtitle">Un interlocuteur unique à tous niveau de création</p>
+    <a href="contact.html" class="heroCta" data-i18n="home.hero.cta">Discuter de votre projet</a>
 </section>
 
 <section class="pillars">
     <div class="pillarCard">
-        <span class="pillarLabel">Création</span>
-        <h2>Modélisation & Texturing</h2>
-        <p>Assets hard-surface, réalistes ou low poly, réalistes ou stylisés. Textures PBR optimisées pour vos moteurs et vos contraintes de production.</p>
-        <a href="services.html#creation">Voir le détail →</a>
+        <span class="pillarLabel" data-i18n="home.pillars.creation.label">Création</span>
+        <h2 data-i18n="home.pillars.creation.title">Modélisation & Texturing</h2>
+        <p data-i18n="home.pillars.creation.desc">Assets hard-surface, réalistes ou low poly, réalistes ou stylisés. Textures PBR optimisées pour vos moteurs et vos contraintes de production.</p>
+        <a href="services.html#creation" data-i18n="home.pillars.creation.link">Voir le détail →</a>
     </div>
     <div class="pillarCard">
-        <span class="pillarLabel">Conseil</span>
-        <h2>Consultation préproduction</h2>
-        <p>Estimation de budgets, de délais et de complexité technique en amont. Un regard de professionnel pour sécuriser vos productions avant de lancer la fabrication.</p>
-        <a href="services.html#conseil">Voir le détail →</a>
+        <span class="pillarLabel" data-i18n="home.pillars.conseil.label">Conseil</span>
+        <h2 data-i18n="home.pillars.conseil.title">Consultation préproduction</h2>
+        <p data-i18n="home.pillars.conseil.desc">Estimation de budgets, de délais et de complexité technique en amont. Un regard de professionnel pour sécuriser vos productions avant de lancer la fabrication.</p>
+        <a href="services.html#conseil" data-i18n="home.pillars.conseil.link">Voir le détail →</a>
     </div>
     <div class="pillarCard">
-        <span class="pillarLabel">Développement</span>
-        <h2>Interactions Unity & VR</h2>
-        <p>Intégration d'assets, shaders sur mesure, prototypage d'interactions pour jeux vidéo, expériences VR et démonstrateurs immersifs.</p>
-        <a href="services.html#dev">Voir le détail →</a>
+        <span class="pillarLabel" data-i18n="home.pillars.dev.label">Développement</span>
+        <h2 data-i18n="home.pillars.dev.title">Interactions Unity & VR</h2>
+        <p data-i18n="home.pillars.dev.desc">Intégration d'assets, shaders sur mesure, prototypage d'interactions pour jeux vidéo, expériences VR et démonstrateurs immersifs.</p>
+        <a href="services.html#dev" data-i18n="home.pillars.dev.link">Voir le détail →</a>
     </div>
 </section>
 
 <section class="mediaBlock mediaBlockAnimated mediaBlockFromRight">
     <div class="mediaBlockText">
-        <h2 class="mediaBlockTitle">Un profil pluridisciplinaire : artiste 3D et développeur</h2>
-        <p class="mediaBlockDescription">La double compétence modélisation / développement permet d'aller au-delà de la simple livraison d'assets : anticiper les contraintes moteur, optimiser dès le sculpt, et brancher directement le rendu final dans Unity.</p>
-        <p class="mediaBlockDescription">Résultat : moins d'allers-retours entre l'équipe artistique et l'équipe technique, et des livrables prêts à l'emploi.</p>
+        <h2 class="mediaBlockTitle" data-i18n="home.dualskills.title">Un profil pluridisciplinaire : artiste 3D et développeur</h2>
+        <p class="mediaBlockDescription" data-i18n="home.dualskills.desc1">La double compétence modélisation / développement permet d'aller au-delà de la simple livraison d'assets : anticiper les contraintes moteur, optimiser dès le sculpt, et brancher directement le rendu final dans Unity.</p>
+        <p class="mediaBlockDescription" data-i18n="home.dualskills.desc2">Résultat : moins d'allers-retours entre l'équipe artistique et l'équipe technique, et des livrables prêts à l'emploi.</p>
     </div>
-    <div class="mediaBlockMediaGroup animated-image">
+    <div class="mediaBlockMediaGroup mediaBlockMediaGroupSingle animated-image">
         <img src="./assets/Images/UnityProjects/QuebecTour360/dualskills.png" class="mediaBlockMedia">
     </div>
 </section>
 
 <footer>
-    <!-- <p>InfoGraFX - Micro-entreprise (SIRET : 10846572500019): <a href="contact.html">infografx13@gmail.com</a></p> -->
-    <p>Un projet en tête ? <a href="contact.html">discutons de votre projet</a>.</p>
+    <p data-i18n="home.footer.cta">Un projet en tête ? <a href="contact.html" data-i18n="home.footer.ctaLink">discutons de votre projet</a>.</p>
     <p class="footerLegal">
-        <a href="cvg.html">CGV</a>
+        <a href="cvg.html" data-i18n="footer.cgv">CGV</a>
         <span>·</span>
-        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="mentions-legales.html" data-i18n="footer.legal">Mentions légales</a>
     </p>
 </footer>
 
 <script type="module" src="./js/components/navToggle.js"></script>
+<script type="module" src="./js/components/i18n.js"></script>
 <script type="module" src="./js/main.js"></script>
 
 </body>

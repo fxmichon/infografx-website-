@@ -15,98 +15,115 @@
 <body>
 <header>            
     <img src="./assets/Images/Logo/logo1BATD.png" class="minlogo" alt="InfoGraFX">
-    <nav>
-        <a href="index.html">Accueil</a>
-        <a href="services.html">Services</a>
-        <a href="creations.html">Créations</a>
-        <a href="apropos.html">Qui suis-je</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+    <div class="headerRight">
+        <nav>
+            <a href="index.html" data-i18n="nav.home">Accueil</a>
+            <a href="services.html" data-i18n="nav.services">Services</a>
+            <a href="creations.html" data-i18n="nav.creations">Créations</a>
+            <a href="apropos.html" data-i18n="nav.about">Qui suis-je</a>
+            <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="langSwitch">
+            <button type="button" class="langSwitchToggle" aria-haspopup="true" aria-expanded="false">
+                <img src="./assets/Icons/lang_fr.png" alt="" class="flagIcon langCurrentFlag" onerror="this.style.display='none'" onload="this.style.display=''">
+                <span class="langCurrent">FR</span>
+                <span class="langCaret">▾</span>
+            </button>
+            <ul class="langMenu">
+                <li><button type="button" class="langOption isActive" data-lang="fr"><img src="./assets/Icons/lang_fr.png" alt="" class="flagIcon" onerror="this.style.display='none'" onload="this.style.display=''"> Français</button></li>
+                <li><button type="button" class="langOption" data-lang="en"><img src="./assets/Icons/lang_en.png" alt="" class="flagIcon" onerror="this.style.display='none'" onload="this.style.display=''"> English</button></li>
+            </ul>
+        </div>
+    </div>
 </header>
 
 <section class="hero">
-    <h1>Conditions Générales de Vente</h1>
-    <p class="heroTagline">Cadre légal des prestations InfoGraFX : création 3D, visuels techniques et environnements numériques.</p>
+    <h1 data-i18n="cgv.hero.title">Conditions Générales de Vente</h1>
+    <p class="heroTagline" data-i18n="cgv.hero.tagline">Cadre légal des prestations InfoGraFX : création 3D, visuels techniques et environnements numériques.</p>
 </section>
 
 <section class="mediaBlock mediaBlockAnimated mediaBlockFromRight">
     <div class="mediaBlockText">
-        <p class="mediaBlockDescription">
+        <p class="mediaBlockDescription" data-i18n="cgv.intro">
             <strong>Prestataire :</strong> InfoGraFX, micro-entreprise représentée par François-Xavier Michon — SIRET 10846572500019 — contact : <a href="mailto:infografx13@gmail.com">infografx13@gmail.com</a>. Les présentes CGV s'appliquent à toute prestation commandée auprès d'InfoGraFX, sauf accord écrit contraire.
         </p>
 
-        <h2 class="mediaBlockTitle" id="objet">1. Objet</h2>
-        <p class="mediaBlockDescription">
+        <h2 class="mediaBlockTitle" id="objet" data-i18n="cgv.s1.title">1. Objet</h2>
+        <p class="mediaBlockDescription" data-i18n="cgv.s1.desc">
             Les présentes Conditions Générales de Vente (CGV) encadrent les prestations proposées par InfoGraFX, studio indépendant spécialisé en création 3D, visuels techniques, environnements numériques et contenus graphiques destinés à des projets créatifs, pédagogiques ou professionnels.
         </p>
 
-        <h2 class="mediaBlockTitle" id="nature">2. Nature des prestations</h2>
-        <p class="mediaBlockDescription">
+        <h2 class="mediaBlockTitle" id="nature" data-i18n="cgv.s2.title">2. Nature des prestations</h2>
+        <p class="mediaBlockDescription" data-i18n="cgv.s2.desc">
             Les prestations InfoGraFX sont de nature artistique et technique. Elles reposent sur une obligation de moyens, et non une obligation de résultat. Les livrables peuvent inclure : modèles 3D, textures, rendus, animations, visuels techniques, scènes, assets ou documents associés.
         </p>
 
-        <h2 class="mediaBlockTitle" id="commande">3. Commande et périmètre</h2>
-        <p class="mediaBlockDescription">
+        <h2 class="mediaBlockTitle" id="commande" data-i18n="cgv.s3.title">3. Commande et périmètre</h2>
+        <p class="mediaBlockDescription" data-i18n="cgv.s3.desc">
             La commande est validée après acceptation du devis ou de la proposition commerciale. Le périmètre de la mission est défini dans ce document. Les révisions incluses sont précisées. Toute modification hors périmètre, changement de direction artistique ou ajout de fonctionnalités pourra faire l'objet d'une facturation complémentaire.
         </p>
 
-        <h2 class="mediaBlockTitle" id="tarifs">4. Tarifs et facturation</h2>
-        <p class="mediaBlockDescription">
+        <h2 class="mediaBlockTitle" id="tarifs" data-i18n="cgv.s4.title">4. Tarifs et facturation</h2>
+        <p class="mediaBlockDescription" data-i18n="cgv.s4.desc">
             Les tarifs sont exprimés en euros. <strong>TVA non applicable, article 293 B du Code général des impôts</strong> (micro-entreprise en franchise en base de TVA). Toute prestation supplémentaire non prévue initialement fera l'objet d'un devis additionnel. Les factures sont payables selon les modalités indiquées (virement, plateforme, etc.).
         </p>
 
-        <h2 class="mediaBlockTitle" id="paiement">5. Paiement et livraison</h2>
-        <p class="mediaBlockDescription">
+        <h2 class="mediaBlockTitle" id="paiement" data-i18n="cgv.s5.title">5. Paiement et livraison</h2>
+        <p class="mediaBlockDescription" data-i18n="cgv.s5.desc">
             Les livrables sont remis après paiement complet, sauf accord spécifique. Tout retard ou défaut de paiement suspend la livraison et les droits d'usage. Les délais de livraison sont indicatifs ; un retard ne peut donner lieu à pénalité ou annulation.
         </p>
 
-        <h2 class="mediaBlockTitle" id="propriete">6. Propriété intellectuelle</h2>
-        <p class="mediaBlockDescription">
-            Les créations InfoGraFX sont originales ou basées sur des ressources libres de droits pour un usage commercial. Les droits d'utilisation, reproduction et diffusion sont transférés au client après paiement complet. InfoGraFX conserve ses droits moraux sur les créations, sauf accord spécifique.
+        <h2 class="mediaBlockTitle" id="propriete" data-i18n="cgv.s6.title">6. Propriété intellectuelle</h2>
+        <p class="mediaBlockDescription" data-i18n="cgv.s6.desc1">
+            Les créations réalisées dans le cadre d'une prestation InfoGraFX sont originales ou basées sur des ressources libres de droits pour un usage commercial. Les droits d'utilisation, reproduction et diffusion de ces créations sont transférés au client après paiement complet. InfoGraFX conserve ses droits moraux sur les créations, sauf accord spécifique.
+        </p>
+        <p class="mediaBlockDescription" data-i18n="cgv.s6.desc2">
+            Certains visuels présentés sur ce site à titre de portfolio ont été réalisés dans le cadre d'un emploi salarié antérieur (recherche universitaire) ; les modèles et fichiers sources associés appartiennent à l'employeur concerné et ne sont ni cédés ni mis à disposition. Seuls les rendus visuels sont montrés, à des fins de démonstration de compétence.
         </p>
 
-        <h2 class="mediaBlockTitle" id="responsabilite-client">7. Responsabilité du client</h2>
-        <p class="mediaBlockDescription">
+        <h2 class="mediaBlockTitle" id="responsabilite-client" data-i18n="cgv.s7.title">7. Responsabilité du client</h2>
+        <p class="mediaBlockDescription" data-i18n="cgv.s7.desc">
             Le client est responsable de l'intégration, de l'usage final, de la diffusion et des modifications ultérieures des livrables InfoGraFX. Le studio ne peut être tenu responsable des conséquences liées à un usage non conforme ou différent de celui prévu initialement.
         </p>
 
-        <h2 class="mediaBlockTitle" id="limitation">8. Limitation de responsabilité</h2>
-        <p class="mediaBlockDescription">
+        <h2 class="mediaBlockTitle" id="limitation" data-i18n="cgv.s8.title">8. Limitation de responsabilité</h2>
+        <p class="mediaBlockDescription" data-i18n="cgv.s8.desc">
             InfoGraFX ne garantit aucun résultat financier, commercial ou opérationnel. Le studio ne peut être tenu responsable des pertes indirectes, retards de projet, problèmes d'intégration ou dommages liés à l'usage final des livrables.
         </p>
 
-        <h2 class="mediaBlockTitle" id="confidentialite">9. Confidentialité</h2>
-        <p class="mediaBlockDescription">
+        <h2 class="mediaBlockTitle" id="confidentialite" data-i18n="cgv.s9.title">9. Confidentialité</h2>
+        <p class="mediaBlockDescription" data-i18n="cgv.s9.desc">
             Les informations transmises par le client sont confidentielles et utilisées uniquement dans le cadre de la prestation.
         </p>
 
-        <h2 class="mediaBlockTitle" id="retractation">10. Droit de rétractation</h2>
-        <p class="mediaBlockDescription">
+        <h2 class="mediaBlockTitle" id="retractation" data-i18n="cgv.s10.title">10. Droit de rétractation</h2>
+        <p class="mediaBlockDescription" data-i18n="cgv.s10.desc">
             Conformément à l'article L221-28 du Code de la consommation, le droit de rétractation ne s'applique pas aux contrats de fourniture de contenus numériques ou de services de création sur mesure, confectionnés selon les spécifications du client et personnalisés. En passant commande, le client particulier reconnaît que la prestation est réalisée sur mesure et renonce expressément à son droit de rétractation dès lors que l'exécution a commencé avec son accord avant l'expiration du délai légal de 14 jours.
         </p>
 
-        <h2 class="mediaBlockTitle" id="litiges">11. Litiges, droit applicable et médiation</h2>
-        <p class="mediaBlockDescription">
+        <h2 class="mediaBlockTitle" id="litiges" data-i18n="cgv.s11.title">11. Litiges, droit applicable et médiation</h2>
+        <p class="mediaBlockDescription" data-i18n="cgv.s11.desc">
             Les présentes CGV sont soumises au droit français. En cas de désaccord, une solution amiable est recherchée en priorité. Pour les prestations réalisées via une plateforme (Fiverr, Upwork), la médiation interne de la plateforme est utilisée avant toute autre démarche. À défaut d'accord amiable, le litige sera soumis aux juridictions compétentes du ressort du domicile du prestataire, sauf disposition impérative contraire applicable aux consommateurs.
         </p>
 
-        <h2 class="mediaBlockTitle" id="acceptation">12. Acceptation des CGV</h2>
-        <p class="mediaBlockDescription">
+        <h2 class="mediaBlockTitle" id="acceptation" data-i18n="cgv.s12.title">12. Acceptation des CGV</h2>
+        <p class="mediaBlockDescription" data-i18n="cgv.s12.desc">
             La validation d'un devis, d'une commande ou d'une prestation implique l'acceptation pleine et entière des présentes CGV.
         </p>
     </div>
 </section>
 
 <footer>
-    <p>Besoin d'informations supplémentaires ? <a href="contact.html">Contactez InfoGraFX</a>.</p>
+    <p data-i18n="cgv.footer.cta">Besoin d'informations supplémentaires ? <a href="contact.html" data-i18n="cgv.footer.ctaLink">Contactez InfoGraFX</a>.</p>
     <p class="footerLegal">
-        <a href="cvg.html">CGV</a>
+        <a href="cvg.html" data-i18n="footer.cgv">CGV</a>
         <span>·</span>
-        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="mentions-legales.html" data-i18n="footer.legal">Mentions légales</a>
     </p>
 </footer>
 
 <script type="module" src="./js/components/navToggle.js"></script>
+<script type="module" src="./js/components/i18n.js"></script>
 <script type="module" src="./js/main.js"></script>
 
 </body>

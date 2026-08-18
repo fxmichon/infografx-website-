@@ -16,25 +16,38 @@
 <body>
     <header>
         <img src="./assets/Images/Logo/logo1BATD.png" class="minlogo" alt="InfoGraFX">
-        <nav>
-            <a href="index.html">Accueil</a>
-            <a href="services.html">Services</a>
-            <a href="creations.html">Créations</a>
-            <a href="apropos.html">Qui suis-je</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <div class="headerRight">
+            <nav>
+                <a href="index.html" data-i18n="nav.home">Accueil</a>
+                <a href="services.html" data-i18n="nav.services">Services</a>
+                <a href="creations.html" data-i18n="nav.creations">Créations</a>
+                <a href="apropos.html" data-i18n="nav.about">Qui suis-je</a>
+                <a href="contact.html" data-i18n="nav.contact">Contact</a>
+            </nav>
+            <div class="langSwitch">
+                <button type="button" class="langSwitchToggle" aria-haspopup="true" aria-expanded="false">
+                    <img src="./assets/Icons/lang_fr.png" alt="" class="flagIcon langCurrentFlag" onerror="this.style.display='none'" onload="this.style.display=''">
+                    <span class="langCurrent">FR</span>
+                    <span class="langCaret">▾</span>
+                </button>
+                <ul class="langMenu">
+                    <li><button type="button" class="langOption isActive" data-lang="fr"><img src="./assets/Icons/lang_fr.png" alt="" class="flagIcon" onerror="this.style.display='none'" onload="this.style.display=''"> Français</button></li>
+                    <li><button type="button" class="langOption" data-lang="en"><img src="./assets/Icons/lang_en.png" alt="" class="flagIcon" onerror="this.style.display='none'" onload="this.style.display=''"> English</button></li>
+                </ul>
+            </div>
+        </div>
     </header>
 
     <section class="hero">
-        <h1>Créations</h1>
-        <p class="heroTagline">Une sélection de projets récents. La galerie s'enrichit au fil des productions.</p>
+        <h1 data-i18n="creations.hero.title">Créations</h1>
+        <p class="heroTagline" data-i18n="creations.hero.tagline">Une sélection de projets récents. La galerie s'enrichit au fil des productions.</p>
     </section>
 
     <section class="cards">
         <div class="card">
             <img src="./assets/Images/3D/Objects/Retroprojector.png" alt="Vidéoprojecteur 3D game-ready">
-            <h2>Assets 3D divers</h2>
-            <p>Prop optimisé pour moteur temps réel, livré avec fichiers sources et textures PBR complètes.</p>
+            <h2 data-i18n="creations.card1.title">Assets 3D divers</h2>
+            <p data-i18n="creations.card1.desc">Prop optimisé pour moteur temps réel, livré avec fichiers sources et textures PBR complètes.</p>
             <script type="application/json" class="cardGallery">
         [
             {"src": "./assets/Images/3D/Objects/Retroprojector.png", "alt": "Retroprojecteur", "caption": "Retroprojecteur : Style stylisé"},
@@ -49,8 +62,8 @@
         </div>
         <div class="card">
             <img src="./assets/Images/3D/Dojo/Dojo8.jpg" alt="Environnement 3D d'un dojo pour application VR">
-            <h2>Environnements 3D Complets </h2>
-            <p>Modélisation d'un environnement complet pour une application VR </p>
+            <h2 data-i18n="creations.card2.title">Environnements 3D Complets </h2>
+            <p data-i18n="creations.card2.desc">Modélisation d'un environnement complet pour une application VR </p>
             <script type="application/json" class="cardGallery">
         [
             {"src": "./assets/Images/3D/Dojo/Dojo8.jpg", "alt": "Dojo - vue 1", "caption": "Dojo : Rendu final, vue d'ensemble."},
@@ -118,8 +131,8 @@
         <div class="card">
             <img src="./assets/Images/UnityProjects/QuebecTour360/QuebecTour360Miniature2.png"
                 alt="Interface de l'application de visite virtuelle Québec Tour 360">
-            <h2>Création complète d'une Expérience VR</h2>
-            <p>Application de visite virtuelle du Québec : création de l'environnement 3D, organisation et retouche des
+            <h2 data-i18n="creations.card3.title">Création complète d'une Expérience VR</h2>
+            <p data-i18n="creations.card3.desc">Application de visite virtuelle du Québec : création de l'environnement 3D, organisation et retouche des
                 photos 360° et 2D, mise en place des interactions.</p>
             <!-- Ajoute ici d'autres captures du même projet -->
             <script type="application/json" class="cardGallery">
@@ -137,15 +150,16 @@
     </section>
 
     <footer>
-        <p>Un projet en tête ? <a href="contact.html">discutons de votre projet</a>.</p>
+        <p data-i18n="creations.footer.cta">Un projet en tête ? <a href="contact.html" data-i18n="creations.footer.ctaLink">discutons de votre projet</a>.</p>
         <p class="footerLegal">
-            <a href="cvg.html">CGV</a>
+            <a href="cvg.html" data-i18n="footer.cgv">CGV</a>
             <span>·</span>
-            <a href="mentions-legales.html">Mentions légales</a>
+            <a href="mentions-legales.html" data-i18n="footer.legal">Mentions légales</a>
         </p>
     </footer>
 
     <script type="module" src="./js/components/navToggle.js"></script>
+    <script type="module" src="./js/components/i18n.js"></script>
     <script type="module" src="./js/main.js"></script>
 
 </body>

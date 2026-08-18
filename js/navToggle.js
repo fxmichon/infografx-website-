@@ -13,7 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
     toggle.setAttribute("aria-label", "Ouvrir le menu");
     toggle.setAttribute("aria-expanded", "false");
     toggle.innerHTML = "<span></span><span></span><span></span>";
-    header.insertBefore(toggle, nav);
+    // On insère juste avant <nav>, quel que soit son parent direct
+    // (header, ou .headerRight si le sélecteur de langue est présent).
+    nav.parentNode.insertBefore(toggle, nav);
 
     const closeNav = () => {
         nav.classList.remove("navOpenState");
@@ -39,6 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Si l'écran repasse en desktop (rotation, redimensionnement), on
     // s'assure que le menu ne reste pas ouvert en position mobile.
     window.addEventListener("resize", () => {
-        if (window.innerWidth > 780) closeNav();
+        if (window.innerWidth > 1024) closeNav();
     });
 });

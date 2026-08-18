@@ -65,6 +65,7 @@
     flex: 1 1 auto;
     display: flex;
     align-items: stretch;
+    justify-content: center;
     gap: clamp(10px, 1.5vw, 20px);
     height: clamp(220px, 30vw, 420px);
     min-width: 0;
@@ -78,6 +79,26 @@
     object-fit: cover;
     border-radius: 14px;
     background: var(--col-border);
+}
+
+/* Une seule image dans le groupe : on ne crop pas. On respecte la
+   hauteur commune et on laisse la largeur s'ajuster à son propre ratio
+   (object-fit: contain) plutôt que de forcer un remplissage qui
+   couperait une image carrée ou portrait.
+   Détection via :has() (moderne) ET via la classe explicite
+   .mediaBlockMediaGroupSingle posée en HTML (garantie tous navigateurs). */
+.mediaBlockMediaGroup:has(> img:only-child),
+.mediaBlockMediaGroupSingle {
+    justify-content: center;
+}
+
+.mediaBlockMediaGroup:has(> img:only-child) .mediaBlockMedia,
+.mediaBlockMediaGroupSingle .mediaBlockMedia {
+    flex: 0 1 auto;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    background: #ffffff;
 }
 
 /* ============================

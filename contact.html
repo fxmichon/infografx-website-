@@ -13,18 +13,31 @@
 <body>
 <header>            
     <img src="./assets/Images/Logo/logo1BATD.png" class="minlogo" alt="InfoGraFX">
-    <nav>
-        <a href="index.html">Accueil</a>
-        <a href="services.html">Services</a>
-        <a href="creations.html">Créations</a>
-        <a href="apropos.html">Qui suis-je</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+    <div class="headerRight">
+        <nav>
+            <a href="index.html" data-i18n="nav.home">Accueil</a>
+            <a href="services.html" data-i18n="nav.services">Services</a>
+            <a href="creations.html" data-i18n="nav.creations">Créations</a>
+            <a href="apropos.html" data-i18n="nav.about">Qui suis-je</a>
+            <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="langSwitch">
+            <button type="button" class="langSwitchToggle" aria-haspopup="true" aria-expanded="false">
+                <img src="./assets/Icons/lang_fr.png" alt="" class="flagIcon langCurrentFlag" onerror="this.style.display='none'" onload="this.style.display=''">
+                <span class="langCurrent">FR</span>
+                <span class="langCaret">▾</span>
+            </button>
+            <ul class="langMenu">
+                <li><button type="button" class="langOption isActive" data-lang="fr"><img src="./assets/Icons/lang_fr.png" alt="" class="flagIcon" onerror="this.style.display='none'" onload="this.style.display=''"> Français</button></li>
+                <li><button type="button" class="langOption" data-lang="en"><img src="./assets/Icons/lang_en.png" alt="" class="flagIcon" onerror="this.style.display='none'" onload="this.style.display=''"> English</button></li>
+            </ul>
+        </div>
+    </div>
 </header>
 
 <section class="hero">
-    <h1>Contact</h1>
-    <p class="heroTagline">Un projet, un devis, ou simplement une question technique : décrivez votre besoin.</p>
+    <h1 data-i18n="contact.hero.title">Contact</h1>
+    <p class="heroTagline" data-i18n="contact.hero.tagline">Un projet, un devis, ou simplement une question technique : décrivez votre besoin.</p>
 </section>
 
 <section class="contactWrapper">
@@ -32,42 +45,37 @@
          avec les champs pré-remplis. Limite : ne fonctionne que si un client mail
          est configuré sur l'appareil (peut ne rien faire sur certains mobiles/webmail). -->
     <form class="contactForm" action="mailto:infografx13@gmail.com" method="POST" enctype="text/plain">
-        <!-- <label for="name">Nom</label>
-        <input type="text" id="name" name="Nom" required> -->
-
-        <!-- <label for="email">Votre email (pour vous répondre)</label>
-        <input type="email" id="email" name="Repondre_a" required> -->
-
-        <label for="projectType">Type de projet</label>
+        <label for="projectType" data-i18n="contact.form.projectType">Type de projet</label>
         <select id="projectType" name="Type_de_projet">
-            <option>Modélisation / Texturing</option>
-            <option>Animation</option>
-            <option>Conseil / Cadrage de projet</option>
-            <option>Développement Unity / VR</option>
-            <option>Autre</option>
+            <option data-i18n="contact.form.option.modeling">Modélisation / Texturing</option>
+            <option data-i18n="contact.form.option.animation">Animation</option>
+            <option data-i18n="contact.form.option.conseil">Conseil / Cadrage de projet</option>
+            <option data-i18n="contact.form.option.dev">Développement Unity / VR</option>
+            <option data-i18n="contact.form.option.other">Autre</option>
         </select>
 
-        <label for="message">Décrivez votre besoin</label>
+        <label for="message" data-i18n="contact.form.message">Décrivez votre besoin</label>
         <textarea id="message" name="Message" rows="6" required></textarea>
 
-        <button type="submit">Envoyer</button>
+        <button type="submit" data-i18n="contact.form.submit">Envoyer</button>
     </form>
 
-    <p class="mailtoNote">En cliquant sur « Envoyer », votre application email par défaut va s'ouvrir avec le message pré-rempli, prêt à partir depuis votre propre adresse mail avec laquelle nous communiquerons. Pas de client mail installé ? Écrivez-nous directement à <a href="mailto:infografx13@gmail.com">infografx13@gmail.com</a>.</p>
+    <p class="mailtoNote" data-i18n="contact.mailtoNote">En cliquant sur « Envoyer », votre application email par défaut va s'ouvrir avec le message pré-rempli, prêt à partir depuis votre propre adresse mail avec laquelle nous communiquerons. Pas de client mail installé ? Écrivez-nous directement à <a href="mailto:infografx13@gmail.com">infografx13@gmail.com</a>.</p>
 
     <div class="contactInfo">
-        <h2>Réponse sous 48h ouvrées.</h2>
+        <h2 data-i18n="contact.info.title">Réponse sous 48h ouvrées.</h2>
         <p class="legalNote">InfoGraFX - Micro-entreprise <br>
             SIRET : 10846572500019</p>
         <p class="footerLegal">
-            <a href="cvg.html">CGV</a>
+            <a href="cvg.html" data-i18n="footer.cgv">CGV</a>
             <span>·</span>
-            <a href="mentions-legales.html">Mentions légales</a>
+            <a href="mentions-legales.html" data-i18n="footer.legal">Mentions légales</a>
         </p>
     </div>
 </section>
 
 <script type="module" src="./js/components/navToggle.js"></script>
+<script type="module" src="./js/components/i18n.js"></script>
 <script type="module" src="./js/components/contactForm.js"></script>
 
 </body>

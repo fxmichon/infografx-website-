@@ -15,71 +15,86 @@
 <body>
 <header>            
     <img src="./assets/Images/Logo/logo1BATD.png" class="minlogo" alt="InfoGraFX">
-    <nav>
-        <a href="index.html">Accueil</a>
-        <a href="services.html">Services</a>
-        <a href="creations.html">Créations</a>
-        <a href="apropos.html">Qui suis-je</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+    <div class="headerRight">
+        <nav>
+            <a href="index.html" data-i18n="nav.home">Accueil</a>
+            <a href="services.html" data-i18n="nav.services">Services</a>
+            <a href="creations.html" data-i18n="nav.creations">Créations</a>
+            <a href="apropos.html" data-i18n="nav.about">Qui suis-je</a>
+            <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="langSwitch">
+            <button type="button" class="langSwitchToggle" aria-haspopup="true" aria-expanded="false">
+                <img src="./assets/Icons/lang_fr.png" alt="" class="flagIcon langCurrentFlag" onerror="this.style.display='none'" onload="this.style.display=''">
+                <span class="langCurrent">FR</span>
+                <span class="langCaret">▾</span>
+            </button>
+            <ul class="langMenu">
+                <li><button type="button" class="langOption isActive" data-lang="fr"><img src="./assets/Icons/lang_fr.png" alt="" class="flagIcon" onerror="this.style.display='none'" onload="this.style.display=''"> Français</button></li>
+                <li><button type="button" class="langOption" data-lang="en"><img src="./assets/Icons/lang_en.png" alt="" class="flagIcon" onerror="this.style.display='none'" onload="this.style.display=''"> English</button></li>
+            </ul>
+        </div>
+    </div>
 </header>
 
 <section class="hero">
-    <h1>Mentions légales</h1>
-    <p class="heroTagline">Informations réglementaires relatives à l'édition et à l'hébergement de ce site.</p>
+    <h1 data-i18n="legal.hero.title">Mentions légales</h1>
+    <p class="heroTagline" data-i18n="legal.hero.tagline">Informations réglementaires relatives à l'édition et à l'hébergement de ce site.</p>
 </section>
 
 <section class="mediaBlock mediaBlockAnimated mediaBlockFromRight">
     <div class="mediaBlockText">
-        <h2 class="mediaBlockTitle">Éditeur du site</h2>
-        <p class="mediaBlockDescription">
+        <h2 class="mediaBlockTitle" data-i18n="legal.editor.title">Éditeur du site</h2>
+        <p class="mediaBlockDescription" data-i18n="legal.editor.desc">
             Le site InfoGraFX est édité par François-Xavier Michon, exerçant sous le statut de micro-entreprise sous le nom commercial InfoGraFX.<br>
             SIRET : 10846572500019<br>
+            Adresse : [À compléter : adresse professionnelle ou de domiciliation]<br>
             Email : <a href="mailto:infografx13@gmail.com">infografx13@gmail.com</a>
         </p>
 
-        <h2 class="mediaBlockTitle">Directeur de la publication</h2>
-        <p class="mediaBlockDescription">
+        <h2 class="mediaBlockTitle" data-i18n="legal.director.title">Directeur de la publication</h2>
+        <p class="mediaBlockDescription" data-i18n="legal.director.desc">
             François-Xavier Michon, en qualité de responsable de la micro-entreprise InfoGraFX.
         </p>
 
-        <h2 class="mediaBlockTitle">Hébergement du site</h2>
-        <p class="mediaBlockDescription">
+        <h2 class="mediaBlockTitle" data-i18n="legal.hosting.title">Hébergement du site</h2>
+        <p class="mediaBlockDescription" data-i18n="legal.hosting.desc">
             Ce site est hébergé par GitHub Pages — GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.
         </p>
 
-        <h2 class="mediaBlockTitle">Nom de domaine</h2>
-        <p class="mediaBlockDescription">
+        <h2 class="mediaBlockTitle" data-i18n="legal.domain.title">Nom de domaine</h2>
+        <p class="mediaBlockDescription" data-i18n="legal.domain.desc">
             Le nom de domaine de ce site est enregistré auprès d'OVH SAS, 2 rue Kellermann, 59100 Roubaix, France.
         </p>
 
-        <h2 class="mediaBlockTitle">Propriété intellectuelle</h2>
-        <p class="mediaBlockDescription">
-            L'ensemble des contenus présents sur ce site (textes, images, modèles 3D, animations, logo) est la propriété d'InfoGraFX, sauf mention contraire, et ne peut être reproduit, diffusé ou exploité sans autorisation préalable écrite.
+        <h2 class="mediaBlockTitle" data-i18n="legal.ip.title">Propriété intellectuelle</h2>
+        <p class="mediaBlockDescription" data-i18n="legal.ip.desc">
+            L'ensemble des contenus présents sur ce site (textes, logo, mise en page) est la propriété d'InfoGraFX, sauf mention contraire, et ne peut être reproduit, diffusé ou exploité sans autorisation préalable écrite. Certains visuels 3D présentés à titre de portfolio ont été réalisés dans le cadre d'un emploi salarié antérieur ; les modèles et fichiers sources associés restent la propriété de l'employeur concerné et ne sont ni cédés ni mis à disposition — seuls les rendus visuels sont montrés, à des fins de démonstration de compétence.
         </p>
 
-        <h2 class="mediaBlockTitle">Données personnelles</h2>
-        <p class="mediaBlockDescription">
+        <h2 class="mediaBlockTitle" data-i18n="legal.data.title">Données personnelles</h2>
+        <p class="mediaBlockDescription" data-i18n="legal.data.desc">
             Ce site ne dépose aucun cookie de suivi ni traceur publicitaire. Le formulaire de contact ouvre votre propre client email : les informations que vous y saisissez (nom, email, message) sont transmises directement depuis votre messagerie à InfoGraFX et ne transitent par aucun serveur tiers ni base de données. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression des données que vous nous transmettez par ce biais, exerçable en écrivant à <a href="mailto:infografx13@gmail.com">infografx13@gmail.com</a>.
         </p>
 
-        <h2 class="mediaBlockTitle">Crédits</h2>
-        <p class="mediaBlockDescription">
+        <h2 class="mediaBlockTitle" data-i18n="legal.credits.title">Crédits</h2>
+        <p class="mediaBlockDescription" data-i18n="legal.credits.desc">
             Conception, développement et créations 3D : InfoGraFX. Police de caractères : Manrope (Google Fonts).
         </p>
     </div>
 </section>
 
 <footer>
-    <p>Une question sur ces mentions ? <a href="contact.html">Contactez InfoGraFX</a>.</p>
+    <p data-i18n="legal.footer.cta">Une question sur ces mentions ? <a href="contact.html" data-i18n="legal.footer.ctaLink">Contactez InfoGraFX</a>.</p>
     <p class="footerLegal">
-        <a href="cvg.html">CGV</a>
+        <a href="cvg.html" data-i18n="footer.cgv">CGV</a>
         <span>·</span>
-        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="mentions-legales.html" data-i18n="footer.legal">Mentions légales</a>
     </p>
 </footer>
 
 <script type="module" src="./js/components/navToggle.js"></script>
+<script type="module" src="./js/components/i18n.js"></script>
 <script type="module" src="./js/main.js"></script>
 
 </body>

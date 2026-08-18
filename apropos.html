@@ -15,67 +15,74 @@
 <body>
 <header>            
     <img src="./assets/Images/Logo/logo1BATD.png" class="minlogo" alt="InfoGraFX">
-    <nav>
-        <a href="index.html">Accueil</a>
-        <a href="services.html">Services</a>
-        <a href="creations.html">Créations</a>
-        <a href="apropos.html">Qui suis-je</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+    <div class="headerRight">
+        <nav>
+            <a href="index.html" data-i18n="nav.home">Accueil</a>
+            <a href="services.html" data-i18n="nav.services">Services</a>
+            <a href="creations.html" data-i18n="nav.creations">Créations</a>
+            <a href="apropos.html" data-i18n="nav.about">Qui suis-je</a>
+            <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="langSwitch">
+            <button type="button" class="langSwitchToggle" aria-haspopup="true" aria-expanded="false">
+                <img src="./assets/Icons/lang_fr.png" alt="" class="flagIcon langCurrentFlag" onerror="this.style.display='none'" onload="this.style.display=''">
+                <span class="langCurrent">FR</span>
+                <span class="langCaret">▾</span>
+            </button>
+            <ul class="langMenu">
+                <li><button type="button" class="langOption isActive" data-lang="fr"><img src="./assets/Icons/lang_fr.png" alt="" class="flagIcon" onerror="this.style.display='none'" onload="this.style.display=''"> Français</button></li>
+                <li><button type="button" class="langOption" data-lang="en"><img src="./assets/Icons/lang_en.png" alt="" class="flagIcon" onerror="this.style.display='none'" onload="this.style.display=''"> English</button></li>
+            </ul>
+        </div>
+    </div>
 </header>
 
 <section class="hero">
-    <h1>Qui suis-je ?</h1>
-    <!-- <p class="heroTagline">Un parcours parti des neurosciences, arrivé à la 3D et au développement Unity par la recherche immersive.</p> -->
-    <p class="heroTagline">    Un parcours entre science, 3D et création visuelle, au service de projets immersifs et techniques.</p>
+    <h1 data-i18n="about.hero.title">Qui suis-je ?</h1>
+    <p class="heroTagline" data-i18n="about.hero.tagline">    Un parcours entre science, 3D et création visuelle, au service de projets immersifs et techniques.</p>
 </section>
 
 <section class="mediaBlock mediaBlockAnimated mediaBlockFromRight">
     <div class="mediaBlockText">
-        <!-- <h2 class="mediaBlockTitle">Un chercheur devenu artisan du visuel et du code</h2> -->
-        <h2 class="mediaBlockTitle">Du monde scientifique à la création 3D</h2>
-        <!-- <p class="mediaBlockDescription">Mon parcours a commencé en neurosciences et déjà lié à l'étude de la réalitée virtuelle sur animaux. Lors de mon post-doctorat, j'ai continuer de découvrir la puissance la richesse de la création 3D et des environnements immersifs - une passion qui ne m'a plus quitté depuis.</p>
-        <p class="mediaBlockDescription">De retour en France, j'ai travaillé au sein d'une plateforme de recherche spécialisée en VR, où j'ai consolidé mes compétences en modélisation, intégration technique et programmation, au contact d'exigences scientifiques strictes.</p>
-        <p class="mediaBlockDescription">Basé à Marseille, je conçois aujourd'hui sous InfoGraFX des assets 3D, des scènes et des interactions qui mêlent rigueur technique et sensibilité visuelle.</p> -->
-
-        <p class="mediaBlockDescription">Mon parcours a commencé en neurosciences, où j’ai travaillé sur des dispositifs immersifs et des environnements virtuels en contexte de recherche. 
+        <h2 class="mediaBlockTitle" data-i18n="about.intro.title">Du monde scientifique à la création 3D</h2>
+        <p class="mediaBlockDescription" data-i18n="about.intro.desc1">Mon parcours a commencé en neurosciences, où j’ai travaillé sur des dispositifs immersifs et des environnements virtuels en contexte de recherche. 
     C’est dans ce cadre que j’ai découvert la richesse de la création 3D et des expériences interactives.</p>
-        <p class="mediaBlockDescription">    De retour en France, j’ai rejoint une plateforme spécialisée en réalité virtuelle. J’y ai développé des environnements 3D, des assets optimisés et des prototypes immersifs, en collaboration avec des équipes pluridisciplinaires.</p>
-        <p class="mediaBlockDescription">    Aujourd’hui, avec mon entreprise InfoGraFX, je conçois des assets 3D, des scènes et des visuels techniques avec une approche mêlant rigueur, lisibilité et sensibilité artistique.</p>
+        <p class="mediaBlockDescription" data-i18n="about.intro.desc2">    De retour en France, j’ai rejoint une plateforme spécialisée en réalité virtuelle. J’y ai développé des environnements 3D, des assets optimisés et des prototypes immersifs, en collaboration avec des équipes pluridisciplinaires.</p>
+        <p class="mediaBlockDescription" data-i18n="about.intro.desc3">    Aujourd’hui, avec mon entreprise InfoGraFX, je conçois des assets 3D, des scènes et des visuels techniques avec une approche mêlant rigueur, lisibilité et sensibilité artistique.</p>
     </div>
-    <!-- <img src="./assets/Images/ProfilePhoto.png" class="mediaBlockMedia animated-image"> -->
 </section>
 
-<h2 class="sectionTitle">Ce que ce parcours apporte concrètement</h2>
+<h2 class="sectionTitle" data-i18n="about.pillars.title">Ce que ce parcours apporte concrètement</h2>
 
 <section class="pillars">
     <div class="pillarCard">
-        <span class="pillarLabel">Rigueur</span>
-        <h2>Une méthode issue de la recherche</h2>
-        <p>Habitude de la mesure, de la reproductibilité et de la documentation - utile pour cadrer un budget ou une complexité de scène sans approximation.</p>
+        <span class="pillarLabel" data-i18n="about.pillars.rigueur.label">Rigueur</span>
+        <h2 data-i18n="about.pillars.rigueur.title">Une méthode issue de la recherche</h2>
+        <p data-i18n="about.pillars.rigueur.desc">Habitude de la mesure, de la reproductibilité et de la documentation - utile pour cadrer un budget ou une complexité de scène sans approximation.</p>
     </div>
     <div class="pillarCard">
-        <span class="pillarLabel">Développement</span>
-        <h2>Au-delà du script Unity basique</h2>
-        <p>Des outils desktop développés de A à Z (éditeur graphique complexe, application de suivi) qui témoignent d'une vraie aisance en C#/.NET, pas seulement en intégration d'assets.</p>
+        <span class="pillarLabel" data-i18n="about.pillars.dev.label">Développement</span>
+        <h2 data-i18n="about.pillars.dev.title">Au-delà du script Unity basique</h2>
+        <p data-i18n="about.pillars.dev.desc">Des outils desktop développés de A à Z (éditeur graphique complexe, application de suivi) qui témoignent d'une vraie aisance en C#/.NET, pas seulement en intégration d'assets.</p>
     </div>
     <div class="pillarCard">
-        <span class="pillarLabel">Immersion</span>
-        <h2>Une expérience VR de terrain</h2>
-        <p>Conception d'environnements immersifs en contexte de recherche avant de le faire en contexte commercial - une compréhension fine de ce qui fonctionne réellement en VR.</p>
+        <span class="pillarLabel" data-i18n="about.pillars.immersion.label">Immersion</span>
+        <h2 data-i18n="about.pillars.immersion.title">Une expérience VR de terrain</h2>
+        <p data-i18n="about.pillars.immersion.desc">Conception d'environnements immersifs en contexte de recherche avant de le faire en contexte commercial - une compréhension fine de ce qui fonctionne réellement en VR.</p>
     </div>
 </section>
 
 <footer>
-    <p>Envie de voir les projets techniques plus en détail (Unity VR, outils C#) ? <a href="contact.html">discutons directement de votre projet</a>.</p>
+    <p data-i18n="about.footer.cta">Envie de voir les projets techniques plus en détail (Unity VR, outils C#) ? <a href="contact.html" data-i18n="about.footer.ctaLink">discutons directement de votre projet</a>.</p>
     <p class="footerLegal">
-        <a href="cvg.html">CGV</a>
+        <a href="cvg.html" data-i18n="footer.cgv">CGV</a>
         <span>·</span>
-        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="mentions-legales.html" data-i18n="footer.legal">Mentions légales</a>
     </p>
 </footer>
 
 <script type="module" src="./js/components/navToggle.js"></script>
+<script type="module" src="./js/components/i18n.js"></script>
 <script type="module" src="./js/main.js"></script>
 
 </body>
