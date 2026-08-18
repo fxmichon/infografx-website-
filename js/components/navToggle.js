@@ -1,11 +1,9 @@
-// Injecte un bouton hamburger dans le header et gère l'ouverture/fermeture
-// du menu mobile. Module autonome : à inclure sur CHAQUE page (pas
-// seulement celles qui chargent main.js), pour que le menu mobile
-// fonctionne même sur les pages plus légères (ex. contact.html).
 document.addEventListener("DOMContentLoaded", () => {
     const header = document.querySelector("header");
     const nav = header ? header.querySelector("nav") : null;
     if (!header || !nav) return;
+
+    if (document.querySelector(".navToggle")) return;
 
     const toggle = document.createElement("button");
     toggle.type = "button";
@@ -13,9 +11,14 @@ document.addEventListener("DOMContentLoaded", () => {
     toggle.setAttribute("aria-label", "Ouvrir le menu");
     toggle.setAttribute("aria-expanded", "false");
     toggle.innerHTML = "<span></span><span></span><span></span>";
-    // On insère juste avant <nav>, quel que soit son parent direct
-    // (header, ou .headerRight si le sélecteur de langue est présent).
-    nav.parentNode.insertBefore(toggle, nav);
+
+    // Insère le bouton dans headerRight
+    const headerRight = header.querySelector(".headerRight");
+    if (headerRight) {
+        headerRight.appendChild(toggle);
+    } else {
+        header.appendChild(toggle);
+    }
 
     const closeNav = () => {
         nav.classList.remove("navOpenState");
@@ -23,7 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
         toggle.setAttribute("aria-expanded", "false");
     };
 
-    toggle.addEventListener("click", () => {
+    toggle.addEventListener("click", (e) => {
+        e.stopPropagation();
         const isOpen = nav.classList.toggle("navOpenState");
         toggle.classList.toggle("isOpen", isOpen);
         toggle.setAttribute("aria-expanded", String(isOpen));
@@ -34,12 +38,16 @@ document.addEventListener("DOMContentLoaded", () => {
         link.addEventListener("click", closeNav);
     });
 
+    document.addEventListener("click", (e) => {
+        if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+            closeNav();
+        }
+    });
+
     document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") closeNav();
     });
 
-    // Si l'écran repasse en desktop (rotation, redimensionnement), on
-    // s'assure que le menu ne reste pas ouvert en position mobile.
     window.addEventListener("resize", () => {
         if (window.innerWidth > 1024) closeNav();
     });
