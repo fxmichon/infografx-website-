@@ -85,7 +85,7 @@ header {
     border-bottom: 1px solid var(--col-border);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 9999;
 
     display: flex;               /* ALIGNEMENT GLOBAL */
     align-items: center;         /* CENTRAGE VERTICAL */
@@ -314,6 +314,7 @@ nav a:hover {
     font-size: clamp(1rem, 2.2vw, 1.2rem);
     max-width: 700px;
     margin: 0 auto;
+    /* margin-top: 1rem; */
     color: var(--col-text-light);
 }
 
@@ -466,6 +467,7 @@ footer {
 
 .pillarCard h2 {
     font-size: 1.3rem;
+    min-height: 4rem;
     font-weight: 600;
 }
 
@@ -473,6 +475,7 @@ footer {
     color: var(--col-text-light);
     font-size: 0.95rem;
     flex-grow: 1;
+
 }
 
 .pillarCard a {
@@ -490,7 +493,7 @@ footer {
 --------------------------------*/
 .sectionTitle {
     padding: 10px clamp(16px, 4vw, 40px) 16px;
-    font-size: clamp(1.6rem, 5vw, 3rem);
+    font-size: clamp(1.6rem, 5vw, 2.5rem);
     font-weight: 600;
     background-color: var(--col_blue_dark2);
     color: var(--col_white);
@@ -499,7 +502,7 @@ footer {
 /* IMAGE — entre 40% et 66% selon sa taille réelle */
 .logo {
     flex: 0 1 auto;          /* image prend l’espace qu’elle peut */
-    max-height: clamp(120px, 30vh, 280px);        /* jamais trop haute, jamais minuscule */
+    max-height: clamp(120px, 30vh, 220px);        /* jamais trop haute, jamais minuscule */
     width: auto;
     height: auto;
     object-fit: contain;     /* image entière */
@@ -522,7 +525,10 @@ footer {
 .contactForm {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    justify-self: center;
+    width: 100%;
+    max-width: 500px;
+        gap: 6px;
 }
 
 .contactForm label {

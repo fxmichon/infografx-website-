@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qui suis-je – InfoGraFX</title>
-    <meta name="description" content="Parcours de François-Xavier Michon, fondateur d'InfoGraFX : des neurosciences à la 3D, la VR et le développement Unity.">
+    <meta name="description"
+        content="Parcours de François-Xavier Michon, fondateur d'InfoGraFX : des neurosciences à la 3D, la VR et le développement Unity.">
 
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/components/MediaBlock.css">
-    <link rel="stylesheet" href="./css/components/Lightbox.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components/MediaBlock.css">
+    <link rel="stylesheet" href="css/components/Lightbox.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<header>            
+<header>
     <img src="./assets/Images/Logo/logo1BATD.png" class="minlogo" alt="InfoGraFX">
     <div class="headerRight">
         <nav>
@@ -37,53 +39,99 @@
     </div>
 </header>
 
-<section class="hero">
-    <h1 data-i18n="about.hero.title">Qui suis-je ?</h1>
-    <p class="heroTagline" data-i18n="about.hero.tagline">    Un parcours entre science, 3D et création visuelle, au service de projets immersifs et techniques.</p>
-</section>
+    <section class="hero">
+        <h1 data-i18n="about.hero.title">Qui suis-je ?</h1>
+        <!-- <p class="heroTagline">Un parcours parti des neurosciences, arrivé à la 3D et au développement Unity par la recherche immersive.</p> -->
+        <p data-i18n="about.hero.tagline" class="heroTagline"> Un parcours entre science, informatique et création visuelle</p>
+    </section>
 
-<section class="mediaBlock mediaBlockAnimated mediaBlockFromRight">
-    <div class="mediaBlockText">
-        <h2 class="mediaBlockTitle" data-i18n="about.intro.title">Du monde scientifique à la création 3D</h2>
-        <p class="mediaBlockDescription" data-i18n="about.intro.desc1">Mon parcours a commencé en neurosciences, où j’ai travaillé sur des dispositifs immersifs et des environnements virtuels en contexte de recherche. 
-    C’est dans ce cadre que j’ai découvert la richesse de la création 3D et des expériences interactives.</p>
-        <p class="mediaBlockDescription" data-i18n="about.intro.desc2">    De retour en France, j’ai rejoint une plateforme spécialisée en réalité virtuelle. J’y ai développé des environnements 3D, des assets optimisés et des prototypes immersifs, en collaboration avec des équipes pluridisciplinaires.</p>
-        <p class="mediaBlockDescription" data-i18n="about.intro.desc3">    Aujourd’hui, avec mon entreprise InfoGraFX, je conçois des assets 3D, des scènes et des visuels techniques avec une approche mêlant rigueur, lisibilité et sensibilité artistique.</p>
-    </div>
-</section>
+    <section class="mediaBlock mediaBlockAnimated mediaBlockFromRight">
+        <div class="mediaBlockText">
+            <!-- <h2 class="mediaBlockTitle">Un chercheur devenu artisan du visuel et du code</h2> -->
+            <h2 data-i18n=about.intro.title class="mediaBlockTitle">Du monde scientifique à la création 3D</h2>
+            <!-- <p class="mediaBlockDescription">Mon parcours a commencé en neurosciences et déjà lié à l'étude de la réalitée virtuelle sur animaux. Lors de mon post-doctorat, j'ai continuer de découvrir la puissance la richesse de la création 3D et des environnements immersifs - une passion qui ne m'a plus quitté depuis.</p>
+        <p class="mediaBlockDescription">De retour en France, j'ai travaillé au sein d'une plateforme de recherche spécialisée en VR, où j'ai consolidé mes compétences en modélisation, intégration technique et programmation, au contact d'exigences scientifiques strictes.</p>
+        <p class="mediaBlockDescription">Basé à Marseille, je conçois aujourd'hui sous InfoGraFX des assets 3D, des scènes et des interactions qui mêlent rigueur technique et sensibilité visuelle.</p> -->
 
-<h2 class="sectionTitle" data-i18n="about.pillars.title">Ce que ce parcours apporte concrètement</h2>
+            <p data-i18n=about.intro.desc1 class="mediaBlockDescription">Mon parcours commence en neurosciences, où j'étudiais la mémoire spatiale
+                chez le rongeur.
+                Au fil de mes projets de doctorat et de post-doctorat, j'ai commencé à utiliser la 3D pour créer des
+                environnements
+                expérimentaux et fabriquer du matériel en impression 3D.
+                C'est en post-doctorat au Canada que j'ai vraiment découvert toute la richesse du monde 3D : la
+                possibilité de concevoir des scènes, d'apporter des visuels clairs, d'effectuer des animations,
+                et de donner forme à des idées.
 
-<section class="pillars">
-    <div class="pillarCard">
-        <span class="pillarLabel" data-i18n="about.pillars.rigueur.label">Rigueur</span>
-        <h2 data-i18n="about.pillars.rigueur.title">Une méthode issue de la recherche</h2>
-        <p data-i18n="about.pillars.rigueur.desc">Habitude de la mesure, de la reproductibilité et de la documentation - utile pour cadrer un budget ou une complexité de scène sans approximation.</p>
-    </div>
-    <div class="pillarCard">
-        <span class="pillarLabel" data-i18n="about.pillars.dev.label">Développement</span>
-        <h2 data-i18n="about.pillars.dev.title">Au-delà du script Unity basique</h2>
-        <p data-i18n="about.pillars.dev.desc">Des outils desktop développés de A à Z (éditeur graphique complexe, application de suivi) qui témoignent d'une vraie aisance en C#/.NET, pas seulement en intégration d'assets.</p>
-    </div>
-    <div class="pillarCard">
-        <span class="pillarLabel" data-i18n="about.pillars.immersion.label">Immersion</span>
-        <h2 data-i18n="about.pillars.immersion.title">Une expérience VR de terrain</h2>
-        <p data-i18n="about.pillars.immersion.desc">Conception d'environnements immersifs en contexte de recherche avant de le faire en contexte commercial - une compréhension fine de ce qui fonctionne réellement en VR.</p>
-    </div>
-</section>
+            <p data-i18n=about.intro.desc2> De retour en France, j'ai entamé une reconversion vers la 3D et Unity et j'ai rejoint une plateforme
+                spécialisée en réalité virtuelle.
+                J'y ai développé des environnements 3D, des assets optimisés et des prototypes immersifs, en
+                collaboration avec des équipes pluridisciplinaires.
+                J'ai également conçu des interactions et des comportements scriptés en C# pour des expériences VR sur
+                casque, ce qui m'a permis de consolider mes compétences en développement temps réel.
+                Cette étape a confirmé ma transition vers le monde de la 3D, du code et des outils immersifs.
+            </p>
+            <p data-i18n=about.intro.desc3 class="mediaBlockDescription"> Aujourd'hui, avec InfoGraFX, je produis des assets 3D, des environnements
+                et des visuels
+                techniques avec une approche qui combine précision, lisibilité et exigence artistique. Je travaille à la
+                fois sur
+                la modélisation, l'intégration et les interactions Unity pour offrir des contenus immersifs solides,
+                clairs et adaptés aux
+                pipelines professionnels.
+            </p>
+        </div>
+        <!-- <img src="assets/Images/ProfilePhoto.png" class="mediaBlockMedia animated-image"> -->
+    </section>
 
-<footer>
-    <p data-i18n="about.footer.cta">Envie de voir les projets techniques plus en détail (Unity VR, outils C#) ? <a href="contact.html" data-i18n="about.footer.ctaLink">discutons directement de votre projet</a>.</p>
-    <p class="footerLegal">
-        <a href="cvg.html" data-i18n="footer.cgv">CGV</a>
-        <span>·</span>
-        <a href="mentions-legales.html" data-i18n="footer.legal">Mentions légales</a>
-    </p>
-</footer>
+    <h2 data-i18n=about.pillars.title class="sectionTitle" >Ce que mon parcours m'a apporté</h2>
 
-<script type="module" src="./js/components/navToggle.js"></script>
-<script type="module" src="./js/components/i18n.js"></script>
-<script type="module" src="./js/main.js"></script>
+    <section class="pillars">
+        <div class="pillarCard">
+            <span data-i18n=about.pillars.rigueur.label class="pillarLabel">Rigueur</span>
+            <h2 data-i18n=about.pillars.rigueur.title >Une méthode issue de la recherche</h2>
+            <p data-i18n=about.pillars.rigueur.desc>
+                Habitué aux protocoles scientifiques, j'apporte une approche structurée : mesure, reproductibilité et
+                documentation.
+                Cela me permet de cadrer précisément la complexité d'une scène, d'estimer un volume de travail et de
+                proposer des
+                solutions sans approximation.
+            </p>
+        </div>
+        <div class="pillarCard">
+            <span data-i18n=about.pillars.dev.label class="pillarLabel">Développement</span>
+            <h2 data-i18n=about.pillars.dev.title>Coder Au-delà du script Unity</h2>
+            <p data-i18n=about.pillars.dev.desc>
+                Mon parcours en développement me permet aujourd'hui d'analyser des jeux de données en Matlab, mais aussi
+                en Python dans un contexte scientifique ou pour automatiser des traitements et des protocoles.
+                Il me permet aussi de développer des mécaniques interactives en C# sous Unity, ainsi que des outils et
+                applications en C# hors Unity (WPF) lorsque le projet le nécessite.
+            </p>
+        </div>
+        <div class="pillarCard">
+            <span data-i18n=about.pillars.immersion.label class="pillarLabel">Immersion</span>
+            <h2 data-i18n=about.pillars.immersion.title>Une expérience VR de terrain</h2>
+            <p data-i18n=about.pillars.immersion.desc>
+                Mon expérience de terrain m'a confronté très tôt aux problématiques d'immersion : maintenir l'engagement
+                d'un sujet, éviter la surcharge sensorielle, prévenir le motion sickness ou la désorientation.
+                Elle m'a donné une compréhension précise de ce qui fonctionne concrètement en VR : lisibilité, cohérence
+                des interactions, rythme, feedbacks adaptés et respect des limites physiologiques des utilisateurs.
+
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p data-i18n=about.footer.cta> <a data-i18n=about.footer.ctaLink href="contact.html">discutons de votre projet</a>.</p>
+                <p class="footerLegal">
+            <a href="cvg.html" data-i18n="footer.cgv">CGV</a>
+            <span>·</span>
+            <a href="mentions-legales.html" data-i18n="footer.legal">Mentions légales</a>
+        </p>
+    </footer>
+
+    <script type="module" src="./js/components/navToggle.js"></script>
+    <script type="module" src="./js/components/i18n.js"></script>
+    <script type="module" src="js/main.js"></script>
 
 </body>
+
 </html>
