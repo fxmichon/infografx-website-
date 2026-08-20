@@ -18,6 +18,7 @@
     --col_white: #e6e6e6;
     --col_grey: #333333;
     --col_orange: #eb6c1a;
+    --col_yellow: #ffea76;
     --col_black2: #151515;
     --col_black3: #1a1a1a;
     --col_grey2: #555555;
@@ -25,10 +26,10 @@
     --col_cyan_neon:#00E5FF;
     --col_night_blue: #0B0F26;
     --col_deep_blue: #0E3A66;
-    --col_blue: #00adee;
+    --col_blue: #007bee;
     --col_blue_dark: #809dd2;
-    --col_blue_dark2: #10609c;
-    --col_blue_dark3: #073c64;
+    --col_blue_dark2: #10319c;
+    --col_blue_dark3: #0a1e5f;
 }
 
 /* ------------------------------
@@ -67,11 +68,21 @@ a {
     transition: opacity 0.2s ease;
 }
 
+.footerLink{color: var(--col_blue_dark2);
+}
+
+.footerLink:hover{color: var(--col_blue);
+    text-decoration:underline ;  
+      letter-spacing: 0.5px;
+
+}
+
 a:hover {
-    color: var(--col_blue_dark2);
+    color: var(--col_yellow);
     text-decoration: none;
     font-weight: 400;
-text-decoration:underline ;    letter-spacing: 0.5px;
+text-decoration:underline ; 
+   letter-spacing: 0.5px;
     transition: opacity 0.2s ease;
 }
 
@@ -81,17 +92,23 @@ text-decoration:underline ;    letter-spacing: 0.5px;
 header {
     width: 100%;
     padding: 16px clamp(16px, 4vw, 40px);
-    background: var(--col_blue_dark);
-    border-bottom: 1px solid var(--col-border);
+    /* border-bottom: 1px solid var(--col-border); */
     position: sticky;
     top: 0;
-    z-index: 9999;
-
+    z-index:9999;
     display: flex;               /* ALIGNEMENT GLOBAL */
     align-items: center;         /* CENTRAGE VERTICAL */
     justify-content: space-between; /* LOGO À GAUCHE / NAV À DROITE */
-    min-height: 64px;
+    min-height: 128px;
+    /* background: var(--col_blue_dark); */
+    background: url("../assets/Layout/banniere1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
+
+
 
 .minlogo{
 display: block;
@@ -110,7 +127,7 @@ nav a {
     text-decoration: none;
     font-weight: 400;
     font-size: clamp(0.95rem, 1.2vw, 1.2rem);
-    letter-spacing: 0.5px;
+    letter-spacing: 5px;
     transition: opacity 0.2s ease;
     white-space: nowrap;
 }
@@ -168,16 +185,17 @@ nav a {
 
     nav {
         position: absolute;
-        top: 100%;
-        left: 0;
+        top: 80%;
+        left: auto;
         right: 0;
+        width: 200px;
         flex-direction: column;
         gap: 0;
-        background: var(--col_blue_dark);
+        background: var(--col_blue_dark3);
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        border-bottom: none;
     }
 
     nav.navOpenState {
@@ -192,7 +210,13 @@ nav a {
 }
 
 nav a:hover {
-    opacity: 0.6;
+    opacity:1;
+        color: var(--col_yellow);
+    text-decoration: none;
+    font-weight: 400;
+    text-decoration:dashed ;    
+    letter-spacing: 5px;
+
 }
 
 /* ------------------------------
